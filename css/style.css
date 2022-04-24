@@ -1,0 +1,511 @@
+/* Fonte importada do Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url("../image/dota2.png") no-repeat fixed;
+    background-size: cover;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #11101d;
+    z-index: 100;
+    transition: all 0.4s ease;
+}
+
+.sidebar.close {
+    width: 78px;
+}
+
+.sidebar .logo_details {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .logo_details i {
+    font-size: 30px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+    min-width: 78px;
+    text-align: center;
+}
+
+.sidebar .logo_details .logo_name {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 200;
+    transition: 0.4s ease;
+    transition-delay: 0.5s;
+}
+
+.sidebar.close .logo_details .logo_name {
+    transition: -0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav_links {
+    height: 100%;
+    padding: 30px 0 150px 0;
+    overflow: auto;
+}
+
+.sidebar.close .nav_links {
+    overflow: visible;
+}
+
+.sidebar .nav_links::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar .nav_links li {
+    position: relative;
+    list-style: none;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav_links li:hover {
+    background: #1d1b31;
+}
+
+.sidebar .nav_links li .icon_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sidebar.close .nav_links li .icon_link {
+    display: block;
+}
+
+.sidebar .nav_links li i {
+    height: 50px;
+    line-height: 50px;
+    min-width: 78px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav_links li.showMenu i.arrow {
+    transform: rotate(-180deg);
+}
+
+.sidebar.close .nav_links i.arrow {
+    transition: -0.4s;
+    display: none;
+}
+
+.sidebar .nav_links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.sidebar .nav_links li a .link_name {
+    font-size: 18px;
+    font-weight: 200;
+    color: #fff;
+    transition: all 0.4s ease;
+    transition-delay: 0.5s;
+}
+
+.sidebar.close .nav_links li a .link_name {
+    transition: -0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar .nav_links li .sub_menu {
+    padding: 6px 6px 14px 80px;
+    margin-top: -10px;
+    background: #1d1b31;
+    display: none;
+}
+
+.sidebar .nav_links li.showMenu .sub_menu {
+    display: block;
+}
+
+.sidebar .nav_links li .sub_menu a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px 0;
+    white-space: nowrap;
+    opacity: 0.6;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav_links li .sub_menu a:hover {
+    opacity: 1;
+}
+
+.sidebar.close .nav_links li .sub_menu {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    margin-top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    display: block;
+    pointer-events: none;
+    transition: 0s;
+}
+
+.sidebar.close .nav_links li:hover .sub_menu {
+    top: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.4s ease;
+}
+
+.sidebar .nav_links li .sub_menu .link_name {
+    display: none;
+}
+
+.sidebar.close .nav_links li .sub_menu .link_name {
+    font-size: 18px;
+    opacity: 1;
+    display: block;
+}
+
+.sidebar .nav_links li .sub_menu .blank {
+    opacity: 1;
+    pointer-events: auto;
+    padding: 2px 20px 6px 16px;
+}
+
+.sidebar .nav_links li:hover .sub_menu .blank {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main {
+    height: 95.8vh;
+}
+
+#about {
+    height: 115vh;
+}
+
+#heroes {
+    height: 308vh;
+}
+
+.home_section {
+    position: relative;
+    height: 100%;
+    left: 260px;
+    width: calc(100% - 260px);
+    transition: all 0.4s ease;
+}
+
+.mainVideo iframe {
+    position: relative;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.videoDescription p {
+    position: relative;
+    align-items: center;
+    text-align: center;
+    max-width: 1020px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 20px;
+    margin-top: 10px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.heroBiography {
+    position: relative;
+    align-items: center;
+    max-width: 1020px;
+    padding: 14px 20px;
+    margin-top: 20px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.heroBiography .charName h2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: #fff;
+    letter-spacing: 3px;
+}
+
+.heroBiography .charBio .img1 {
+    width: 496px;
+    height: 279px;
+    float: left;
+    margin: 5px 10px 1px 0;
+}
+
+.heroBiography .charBio .img2 {
+    width: 496px;
+    height: 279px;
+    float: right;
+    margin: 5px 0px 1px 10px;
+}
+
+.heroBiography .charBio p {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: justify;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.episodes .episodeBx {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.episodes .episodeBx .imgBx {
+    position: relative;
+    width: 320px;
+    height: 250px;
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+}
+
+.episodes .episodeBx:hover .imgBx {
+    transform: translateY(-100%);
+}
+
+.episodes .episodeBx .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.episodes .episodeBx .textBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #11101d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: 0.5s ease-in-out;
+}
+
+.episodes .episodeBx:hover .textBx {
+    transform: translateY(0);
+}
+
+.episodes .episodeBx .textBx h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    overflow: hidden;
+}
+
+.episodes .episodeBx .synopsis {
+    position: absolute;
+    text-align: center;
+    margin-left: 10px;
+    bottom: 10px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.9);
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 11px;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s;
+    transition-delay: 0.3s;
+}
+
+.episodes .episodeBx:hover .synopsis {
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar.close ~ .home_section {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+.home_section .sidebar_btn {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.home_section .sidebar_btn .bx-menu {
+    color: #fff;
+    font-size: 35px;
+}
+
+.home_section .sidebar_btn .bx-menu {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.home_section .mainTitle {
+    padding-bottom: 20px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.home_section .mainTitle h2 {
+    font-size: 40px;
+    letter-spacing: 5px;
+    border: none;
+    color: #fff;
+    text-align: center;
+}
+
+.home_section .mainContent {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainContent .mainTitle h2 {
+    font-size: 36px;
+    letter-spacing: 5px;
+    border: none;
+    background: rgba(33, 29, 51, 0.70);
+    padding: 10px 20px;
+    color: #fff;
+    margin: 0 0 0 20px;
+}
+
+.mainContent .contactForm {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: rgba(33, 29, 51, 0.70);
+}
+
+.mainContent .contactForm .row,
+.mainContent .contactForm .row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    margin-top: 15px;
+}
+
+.mainContent .contactForm .row input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mainContent .contactForm .row3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.mainContent .contactForm .row2 input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.mainContent .contactForm .row3 input[name="textarea"] {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.mainContent .contactForm .row3 input[type="submit"] {
+    background: #11101d;
+    color: #fff;
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 200;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    max-width: 150px;
+    border: none;
+}
+
+.copy {
+    position: relative;
+    padding: 10px 20px;
+    left: 260px;
+    width: calc(100% - 260px);
+    bottom: 0px;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 2px;
+    text-align: center;
+    color: #fff;
+    background: #1d1b31;
+    transition: all 0.4s ease;
+}
+
+.sidebar.close ~ .copy {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+
+@media (max-width: 991px) {
+    .sidebar.close .nav_links li .sub_menu {
+        display: none;
+    }
+}
