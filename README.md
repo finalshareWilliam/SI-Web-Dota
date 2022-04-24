@@ -1,2 +1,2 @@
 # web-dota
- Sistema de Internet II, Projeto Dota HTML
+ Sistema de Internet II, Projeto Dota em HTML.
