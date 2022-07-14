@@ -422,7 +422,7 @@ body {
     position: relative;
     width: 100%;
     max-width: 700px;
-    margin-top: 20px;
+    margin-top: 16px;
     padding: 10px 20px;
     background: rgba(33, 29, 51, 0.70);
 }
@@ -485,11 +485,7 @@ body {
 }
 
 .copy {
-    position: relative;
-    padding: 10px 20px;
-    left: 260px;
-    width: calc(100% - 260px);
-    bottom: 0px;
+    position: center;
     font-size: 14px;
     font-weight: 200;
     letter-spacing: 2px;
@@ -497,6 +493,8 @@ body {
     color: #fff;
     background: #1d1b31;
     transition: all 0.4s ease;
+    margin-left: auto; /* linha modificada */
+    margin-right: auto; /* linha adicionada */
 }
 
 .sidebar.close ~ .copy {
