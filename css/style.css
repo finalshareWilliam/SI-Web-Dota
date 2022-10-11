@@ -497,6 +497,7 @@ body {
     margin-right: auto; /* linha adicionada */
 }
 
+
 .sidebar.close ~ .copy {
     left: 78px;
     width: calc(100% - 78px);
